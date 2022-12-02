@@ -20,7 +20,7 @@ fd = open(sys.argv[1], "r")
 for line in fd.readlines():
 	if len(line) > 2:
 		win = ord(line[2]) - ord('X')
-		points += (ord(line[0]) + 3 + win - 1 - ord('A')) % 3 + 1
+		points += (ord(line[0]) + 2 + win - ord('A')) % 3 + 1
 		points += (win * 3)
 
 print(points)
